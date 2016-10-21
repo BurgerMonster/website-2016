@@ -1,9 +1,9 @@
 %nav.navbar.navbar-fixed-top
   .container-fluid
     .navbar-brand.col-sm-1
-      %img{src: asset_path("logo-burger")}
+      = image_tag "logo-burger.png", alt: "Logo Icon"
     .navbar-brand.col-sm-2.col-sm-push-9
-      %img{src: asset_path("logo-name")}
+      = image_tag "logo-name.png", alt: "Logo Name"
     .navbar-header
       %button.navbar-toggle.collapsed{type: "button", data: {toggle: "collapse", target: "#navbar-collapse"}, "aria-expanded": "false"}
         %span.hamburger
