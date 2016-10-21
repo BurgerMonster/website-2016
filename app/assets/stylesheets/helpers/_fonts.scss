@@ -1,20 +1,20 @@
 @font-face {
-  font-family: "Oswald";
-  src: url("Oswald-Light.ttf");
+  font-family: Oswald;
+  src: asset-url("Oswald-Light.ttf");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Oswald";
-  src: url("Oswald-Regular.ttf");
+  font-family: Oswald;
+  src: asset-url("Oswald-Regular.ttf");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "VTKS";
-  src: url("vtks-distress.ttf");
+  font-family: VTKS;
+  src: asset-url("vtks-distress.ttf");
   font-weight: 400;
   font-style: normal;
 }
