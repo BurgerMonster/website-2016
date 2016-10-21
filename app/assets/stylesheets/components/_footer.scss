@@ -1,0 +1,24 @@
+footer {
+  height: 50px;
+  border-top: 1px solid #282828;
+  text-align: center;
+  font-size: 14px;
+
+  span {
+    line-height: 25px;
+  }
+
+  .copyright {
+    font-size: 12px;
+  }
+
+  @include tablet {
+    span {
+      line-height: 50px;
+    }
+
+    .copyright {
+      font-size: 14px;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.btn {
+  border-radius: 0;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.btn-monster {
+  color: #fff;
+  background-color: #43a047;
+  border-color: #388e3c;
+
+  &:focus {
+    color: #fff;
+    background-color: #388e3c;
+    border-color: #1b5e20;
+  }
+
+  &:hover {
+    color: #fff;
+    background-color: #388e3c;
+    border-color: #2e7d32;
+  }
+
+  &:active {
+    color: #fff;
+    background-color: #388e3c;
+    border-color: #2e7d32;
+  }
+
+  &:active:hover,
+  &:active:focus,
+  &:active.focus {
+    color: #fff;
+    background-color: #2e7d32;
+    border-color: #1b5e20;
+  }
+}

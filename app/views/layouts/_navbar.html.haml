@@ -1,0 +1,29 @@
+%nav.navbar.navbar-fixed-top
+  .container-fluid
+    .navbar-brand.col-sm-1
+      %img{src: asset_path("logo-burger")}
+    .navbar-brand.col-sm-2.col-sm-push-9
+      %img{src: asset_path("logo-name")}
+    .navbar-header
+      %button.navbar-toggle.collapsed{type: "button", data: {toggle: "collapse", target: "#navbar-collapse"}, "aria-expanded": "false"}
+        %span.hamburger
+
+    .collapse.navbar-collapse.col-xs-12.col-sm-9.col-sm-pull-2#navbar-collapse
+      %ul.nav.navbar-nav
+        %li= link_to "Home", root_path
+        %li.lg= link_to "Schedule", schedule_path
+        %li= link_to "Menu", menu_path
+        %li= link_to "Book", book_path
+        %li= link_to "Contact", contact_path
+        %li= link_to "About", about_path
+
+        %li.dropdown
+          %a.dropdown-toggle{href: "#", role: "button", "data-toggle": "dropdown", aria: {haspopup: "true", expanded: "false"}}<
+            Social <span class="caret"></span>
+          %ul.dropdown-menu
+            %li
+              %a{href: "https://www.yelp.com/biz/burger-monster-orange-county"} Yelp
+            %li
+              %a{href: "https://www.instagram.com/ocburgermonster"} Instagram
+            %li
+              %a{href: "https://www.facebook.com/OCBurgerMonster"} Facebook

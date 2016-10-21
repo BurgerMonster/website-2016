@@ -1,0 +1,218 @@
+.navbar {
+  min-height: 60px;
+  margin-bottom: 0;
+  border: 0;
+  border-bottom: 1px solid #282828;
+  background-color: #060606;
+
+  @include tablet {
+    min-height: 70px;
+    border-radius: 0;
+  }
+
+  @include desktop {
+    min-height: 80px;
+  }
+}
+
+.navbar > .container-fluid {
+  max-width: 992px;
+  padding: 0;
+}
+
+.navbar-fixed-top .navbar-collapse {
+  max-height: 361px;
+}
+
+.container-fluid > .navbar-header,
+.container-fluid > .navbar-collapse {
+  margin: 0;
+}
+
+.navbar-brand {
+  height: 60px;
+  padding: 5px 0;
+  text-align: center;
+
+  @include tablet {
+    height: 70px;
+  }
+
+  @include desktop {
+    height: 80px;
+  }
+
+  &:first-child {
+    padding-left: 15px;
+
+    @include tablet {
+      padding-left: 0;
+    }
+  }
+
+  img {
+    display: inline-block;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.navbar-toggle {
+  margin: 6px 0;
+  padding: 23px 24px 22px;
+  border: 0;
+  border-radius: 0;
+}
+
+.hamburger {
+  @include transition(100ms ease-in-out);
+
+  &,
+  &:before,
+  &:after {
+    display: block;
+    position: relative;
+    height: 3px;
+    width: 30px;
+    background-color: #eee;
+    content: '';
+  }
+
+  &:before,
+  &:after {
+    @include transition(250ms ease-in-out);
+  }
+
+  &:before {
+    top: -7px;
+  }
+
+  &:after {
+    top: 4px;
+  }
+}
+
+.navbar-toggle[aria-expanded="true"] .hamburger {
+  background: transparent;
+
+  &:before {
+    top: 0;
+    @include transform(rotate(45deg));
+  }
+
+  &:after {
+    top: -3px;
+    @include transform(rotate(-45deg));
+  }
+}
+
+.navbar-collapse {
+  @include box-shadow(none);
+}
+
+.navbar-nav {
+  margin: 0 -15px;
+}
+
+.navbar-nav > li > a {
+  color: rgba(#fff, 0.8);
+
+  &.active,
+  &:hover,
+  &:focus {
+    color: rgba(#006f3e, 0.8);
+    background-color: #060606;
+  }
+}
+
+.navbar-nav > li .dropdown-toggle {
+  display: none;
+}
+
+.navbar-nav > li > .dropdown-menu {
+  position: relative;
+  display: block;
+  float: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  font-size: 16px;
+  background-color: #060606;
+  @include box-shadow(none);
+
+  & li > a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    line-height: 20px;
+    color: rgba(255, 255, 255, 0.8);
+
+    &:hover,
+    &:focus {
+      color: rgba(#006f3e, 0.8);
+      background-color: #060606;
+    }
+  }
+}
+
+@include tablet {
+  .navbar > .container-fluid .navbar-brand {
+    margin-left: 0;
+  }
+
+  .navbar-collapse {
+    width: 75%;
+  }
+
+  .navbar-nav {
+    width: 100%;
+    margin: 0;
+    padding-right: 0;
+  }
+
+  .navbar-nav > li {
+    width: 14%;
+    text-align: center;
+  }
+
+  .navbar-nav > li.lg,
+  .navbar-nav > li.dropdown {
+    width: 15%;
+  }
+
+  .navbar-nav > li > a {
+    margin: 15px 0;
+    padding: 0 5px;
+    line-height: 40px;
+  }
+
+  .navbar-nav > li .dropdown-toggle {
+    display: block;
+  }
+
+  .navbar-nav > li > .dropdown-menu {
+    position: absolute;
+    display: none;
+    float: left;
+    min-width: auto;
+    border: 1px solid #282828;
+  }
+
+  .navbar-nav .open > .dropdown-menu {
+    display: block;
+  }
+
+  .nav .open > a,
+  .nav .open > a:hover,
+  .nav .open > a:focus {
+    color: rgba(#006f3e, 0.8);
+    background-color: #060606;
+  }
+}
+
+@include desktop {
+  .navbar-nav > li > a {
+    line-height: 50px;
+  }
+}

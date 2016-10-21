@@ -1,0 +1,58 @@
+@mixin tablet {
+  @media (screen and min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (screen and min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin spacing($type, $size, $args...) {
+  $sides: ();
+
+  @if length($args) == 0 {
+    $sides: append($sides, '', comma);
+  } @else {
+    @each $arg in $args {
+      $sides: append($sides, '-#{$arg}', comma);
+    }
+  }
+
+  @each $side in $sides {
+    #{$type}#{$side}: $size * 1px;
+  }
+
+  @include tablet {
+    @each $side in $sides {
+      #{$type}#{$side}: $size * 1.5px;
+    }
+  }
+
+  @include desktop {
+    @each $side in $sides {
+      #{$type}#{$side}: $size * 2.5px;
+    }
+  }
+}
+
+@mixin transition($transition...) {
+  -webkit-transition: $transition;
+       -o-transition: $transition;
+          transition: $transition;
+}
+
+@mixin transform($transform) {
+  -webkit-transform: $transform;
+     -moz-transform: $transform;
+       -o-transform: $transform;
+          transform: $transform;
+}
+
+@mixin box-shadow($shadow...) {
+  -webkit-box-shadow: $shadow;
+     -moz-box-shadow: $shadow;
+          box-shadow: $shadow;
+}

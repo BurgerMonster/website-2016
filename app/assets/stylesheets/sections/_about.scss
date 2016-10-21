@@ -1,0 +1,30 @@
+.about {
+  text-align: center;
+
+  img {
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  h2 {
+    font-size: 28px;
+    @include spacing(margin, 30, top);
+  }
+
+  p {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: justify;
+  }
+
+  ul {
+    list-style: none;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0;
+    @include spacing(margin, 20, bottom);
+  }
+}

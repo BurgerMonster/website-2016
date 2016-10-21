@@ -1,0 +1,32 @@
+.banner {
+  max-width: 992px;
+  margin: 0 auto;
+  padding: 0 15px;
+  @include spacing(margin, 20, bottom);
+  @include clearfix;
+
+  h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+
+    @include tablet {
+      font-size: 48px;
+    }
+  }
+
+  & > div {
+    padding: 0;
+  }
+
+  .img-responsive {
+    float: left;
+    width: 33.3%;
+  }
+}
+
+.embed {
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
