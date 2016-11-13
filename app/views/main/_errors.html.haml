@@ -1,0 +1,4 @@
+- if errors.any?
+  %span.glyphicon.glyphicon-remove.form-control-feedback{"aria-hidden": "true"}
+  - errors.each do |error|
+    %span.help-block= error

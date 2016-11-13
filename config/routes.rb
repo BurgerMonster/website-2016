@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root 'main#home'
+
   get :about, to: 'main#about'
   get :schedule, to: 'main#schedule'
   get :menu, to: 'main#menu'

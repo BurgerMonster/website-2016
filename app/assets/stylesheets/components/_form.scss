@@ -1,0 +1,22 @@
+.form {
+  @include clearfix;
+
+  textarea {
+    min-height: 68px;
+    max-height: 170px;
+    max-width: 100%;
+  }
+
+  input[type="submit"] {
+    float: right;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-control {
+    border-radius: 0;
+    background-color: #eee;
+  }
+}

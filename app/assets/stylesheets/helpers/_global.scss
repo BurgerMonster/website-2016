@@ -2,21 +2,21 @@ body {
   font-family: Oswald, arial, sans-serif;
   font-size: 16px;
   color: rgba(#fff, 0.8);
-  background-color: #060606;
+  background-color: #111;
 }
 
 main {
   min-height: 100vh;
-  min-height: calc(100vh - 70px - 60px);
+  min-height: calc(100vh - 71px - 60px);
   margin: 70px 0 10px;
 
   @include tablet {
-    min-height: calc(100vh - 85px - 65px);
+    min-height: calc(100vh - 86px - 65px);
     margin: 85px 0 15px;
   }
 
   @include desktop {
-    min-height: calc(100vh - 105px - 75px);
+    min-height: calc(100vh - 106px - 75px);
     margin: 105px 0 25px;
   }
 }

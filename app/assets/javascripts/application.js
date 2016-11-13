@@ -15,4 +15,6 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require bootbox
+//= require validation
+//= require contact
 //= require turbolinks
