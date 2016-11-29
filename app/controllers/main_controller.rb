@@ -1,15 +1,15 @@
 class MainController < ApplicationController
-  before_action :get_contact, only: [:contact, :contact_confirm]
+  before_action :get_contact, only: [:about, :contact]
 
 
-  def contact_confirm
+  def contact
     @contact.assign_attributes(contact_params)
 
     if @contact.valid?
       ContactMailer.submit(@contact).deliver_now
       redirect_to root_path
     else
-      render :contact
+      render :about
     end
   end
 

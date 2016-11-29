@@ -1,11 +1,10 @@
 Rails.application.routes.draw do
   root 'main#home'
 
-  get :about, to: 'main#about'
-  get :schedule, to: 'main#schedule'
   get :menu, to: 'main#menu'
-  get :book, to: 'main#book'
-  post :book, to: 'main#book_confirm'
-  get :contact, to: 'main#contact'
-  post :contact, to: 'main#contact_confirm'
+  get :schedule, to: 'main#schedule'
+  get :catering, to: 'main#catering'
+  post :catering, to: 'main#catering_confirm'
+  get :about, to: 'main#about'
+  post :contact, to: 'main#contact'
 end

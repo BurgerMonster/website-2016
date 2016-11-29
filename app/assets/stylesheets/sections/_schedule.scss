@@ -1,0 +1,32 @@
+.schedule {
+  .embed-responsive {
+    margin: 0 15px;
+  }
+
+  .embed-responsive.visible-xs {
+    padding-bottom: 100%;
+    padding-bottom: calc(100vh - 71px - 60px);
+  }
+
+  .embed-responsive.hidden-xs {
+    padding-bottom: 56.25%;
+    padding-bottom: calc(100vh - 86px - 65px);
+
+
+    @include desktop {
+      padding-bottom: calc(100vh - 106px - 75px);
+    }
+  }
+
+  @include desktop {
+    .embed-responsive {
+      max-width: 992px;
+      margin: 0 auto;
+      border-radius: 2px;
+    }
+
+    iframe {
+      border-radius: 2px;
+    }
+  }
+}

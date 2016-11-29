@@ -172,13 +172,8 @@
   }
 
   .navbar-nav > li {
-    width: 14%;
+    width: 16.6666667%;
     text-align: center;
-  }
-
-  .navbar-nav > li.lg,
-  .navbar-nav > li.dropdown {
-    width: 15%;
   }
 
   .navbar-nav > li > a {
@@ -195,7 +190,7 @@
     position: absolute;
     display: none;
     float: left;
-    min-width: auto;
+    min-width: 100%;
     border: 1px solid #333;
   }
 

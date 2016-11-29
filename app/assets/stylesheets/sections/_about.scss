@@ -1,8 +1,13 @@
-.about {
+.about,
+.contact {
   text-align: center;
 
   img {
     margin: 0 auto;
+
+    @include desktop {
+      max-width: 768px;
+    }
   }
 
   h1 {
@@ -26,5 +31,36 @@
     margin: 0 auto;
     padding: 0;
     @include spacing(margin, 20, bottom);
+  }
+}
+
+.new_contact {
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  h2 {
+    margin: 20px 0 10px;
+  }
+
+  p {
+    float: left;
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  a {
+    color: rgba(#43a047, 0.8);
+    text-transform: uppercase;
+
+    &.active,
+    &:hover,
+    &:focus {
+      color: rgba(#006f3e, 0.8);
+    }
+  }
+
+  .help-block {
+    text-align: left;
   }
 }

@@ -10,4 +10,25 @@
     %li Our patties are hand formed and seasoned.
     %li Our buns are made daily by a local baker.
 
-  = link_to "Get a free quote!", book_path, class: "btn btn-lg btn-monster"
+= form_for @contact, url: contact_path, html: {class: "form new_contact"} do |f|
+  %h2.text-center Contact Us
+
+  %div{form_classes(:name)}
+    = f.text_field :name, class: "form-control", placeholder: "Name", "data-validate": "presence"
+    = render "errors", errors: @contact.errors[:name]
+
+  %div{form_classes(:email)}
+    = f.text_field :email, class: "form-control", placeholder: "Email", "data-validate": "email"
+    = render "errors", errors: @contact.errors[:email]
+
+  .form-group
+    = f.text_field :subject, class: "form-control", placeholder: "Subject (Optional)"
+
+  %div{form_classes(:message)}
+    = f.text_area :message, class: "form-control", placeholder: "Message", "data-validate": "presence"
+    = render "errors", errors: @contact.errors[:message]
+
+  = f.submit "Submit", class: "btn btn-lg btn-monster"
+
+  %p To request the Burger Monster truck at your event #{link_to "click here", catering_path}
+  %p Or call us at (714) 886-9627
