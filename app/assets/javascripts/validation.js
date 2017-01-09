@@ -1,24 +1,14 @@
-var Validation = (function() {
-
-  function presence(value) {
+var Validation = {
+  presence: function(value) {
     return value ? [] : ['can\'t be blank'];
-  }
-
-  function email(value) {
-    var regExp = /^[\w\d._-]+@[\w\d.-]+\.[\w\d.]+$/;
-
+  },
+  email: function(value) {
     if (!value) {
       return ['can\'t be blank'];
-    } else if (!regExp.test(value)) {
+    } else if (!(/^[\w\d._-]+@[\w\d.-]+\.[\w\d.]+$/.test(value))) {
       return ['is invalid'];
     }
 
     return [];
   }
-
-
-  return {
-    presence: presence,
-    email: email
-  }
-}());
+}

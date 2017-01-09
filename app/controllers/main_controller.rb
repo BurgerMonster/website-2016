@@ -21,6 +21,6 @@ class MainController < ApplicationController
   end
 
   def contact_params
-    params.require(:contact).permit(*@contact.columns)
+    params.require(:contact).permit(*Contact.columns)
   end
 end

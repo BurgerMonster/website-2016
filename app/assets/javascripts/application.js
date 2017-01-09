@@ -17,4 +17,3 @@
 //= require bootbox
 //= require validation
 //= require contact
-//= require turbolinks

@@ -1,0 +1,18 @@
+.catering {
+  .img-responsive {
+    width: 75%;
+    max-width: 750px;
+    margin: 0 auto;
+    @include spacing(margin, 20, top);
+  }
+
+  a {
+    color: rgba(#43a047, 0.8);
+
+    &.active,
+    &:hover,
+    &:focus {
+      color: rgba(#006f3e, 0.8);
+    }
+  }
+}

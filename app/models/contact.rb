@@ -15,8 +15,8 @@ class Contact
     @message ||= nil
   end
 
-  def columns
-    instance_variable_names.map { |v| v.sub("@", "").to_sym }
+  def self.column_names
+    self.new.instance_variable_names.map { |v| v.sub("@", "").to_sym }
   end
 
   def name=(value)

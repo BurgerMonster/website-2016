@@ -1,15 +1,21 @@
 !!!
 %html{lang: "en"}
   %head
+    = title_tag
+    = description_tag
+
     %meta{content: "text/html; charset=UTF-8", "http-equiv": "Content-Type"}/
     %meta{content: "IE=edge", "http-equiv": "X-UA-Compatible"}/
     %meta{name: "viewport", content: "width=device-width, initial-scale=1, user-scalable=no"}/
-    %title Burger Monster
 
     = csrf_meta_tags
-    = stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload"
-    = javascript_include_tag "application", "data-turbolinks-track": "reload"
-    = favicon_link_tag "favicon.ico"
+    = stylesheet_link_tag "application", media: "all"
+    = javascript_include_tag "application"
+
+    %link{rel: "apple-touch-icon", sizes: "180x180", href: image_path("apple-touch-icon.png")}/
+    %link{rel: "shortcut icon", type: "image/x-icon", href: image_path("favicon.ico"), sizes: "16x16"}/
+    %link{rel: "manifest", href: image_path("manifest.json")}/
+    %link{rel: "mask-icon", href: image_path("safari-pinned-tab.svg"), color: "#43a047"}/
 
   %body
     = render "layouts/navbar"
