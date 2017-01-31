@@ -4,10 +4,6 @@
 
   img {
     margin: 0 auto;
-
-    @include desktop {
-      max-width: 768px;
-    }
   }
 
   h1 {
@@ -35,9 +31,8 @@
 }
 
 .new_contact {
-  max-width: 768px;
+  max-width: 750px;
   margin: 0 auto;
-  padding: 0 15px;
 
   h2 {
     margin: 20px 0 10px;
