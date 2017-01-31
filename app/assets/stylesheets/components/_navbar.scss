@@ -1,13 +1,11 @@
 .navbar {
   min-height: 60px;
   margin-bottom: 0;
-  border: 0;
   border-bottom: 1px solid #333;
   background-color: #111;
 
   @include tablet {
     min-height: 70px;
-    border-radius: 0;
   }
 
   @include desktop {
@@ -15,17 +13,12 @@
   }
 }
 
-.navbar > .container-fluid {
-  max-width: 992px;
-  padding: 0;
-}
-
 .navbar-fixed-top .navbar-collapse {
   max-height: 361px;
 }
 
-.container-fluid > .navbar-header,
-.container-fluid > .navbar-collapse {
+.container > .navbar-header,
+.container > .navbar-collapse {
   margin: 0;
 }
 
@@ -112,52 +105,52 @@
 
 .navbar-nav {
   margin: 0 -15px;
-}
 
-.navbar-nav > li > a {
-  color: rgba(#fff, 0.8);
+  & > li > a {
+    color: rgba(#fff, 0.8);
 
-  &.active,
-  &:hover,
-  &:focus {
-    color: rgba(#006f3e, 0.8);
-    background-color: #111;
-  }
-}
-
-.navbar-nav > li .dropdown-toggle {
-  display: none;
-}
-
-.navbar-nav > li > .dropdown-menu {
-  position: relative;
-  display: block;
-  float: none;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  border-radius: 0;
-  font-size: 16px;
-  background-color: #111;
-  @include box-shadow(none);
-
-  & li > a {
-    position: relative;
-    display: block;
-    padding: 10px 15px;
-    line-height: 20px;
-    color: rgba(255, 255, 255, 0.8);
-
+    &.active,
     &:hover,
     &:focus {
       color: rgba(#006f3e, 0.8);
       background-color: #111;
     }
   }
+
+  & > li .dropdown-toggle {
+    display: none;
+  }
+
+  & > li > .dropdown-menu {
+    position: relative;
+    display: block;
+    float: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    font-size: 16px;
+    background-color: #111;
+    @include box-shadow(none);
+
+    & li > a {
+      position: relative;
+      display: block;
+      padding: 10px 15px;
+      line-height: 20px;
+      color: rgba(255, 255, 255, 0.8);
+
+      &:hover,
+      &:focus {
+        color: rgba(#006f3e, 0.8);
+        background-color: #111;
+      }
+    }
+  }
 }
 
 @include tablet {
-  .navbar > .container-fluid .navbar-brand {
+  .navbar > .container .navbar-brand {
     margin-left: 0;
   }
 

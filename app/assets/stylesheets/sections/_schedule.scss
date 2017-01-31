@@ -5,16 +5,16 @@
 
   .embed-responsive.visible-xs {
     padding-bottom: 100%;
-    padding-bottom: calc(100vh - 71px - 60px);
+    padding-bottom: calc(100vh - 81px - 70px);
   }
 
   .embed-responsive.hidden-xs {
     padding-bottom: 56.25%;
-    padding-bottom: calc(100vh - 86px - 65px);
+    padding-bottom: calc(100vh - 101px - 80px);
 
 
     @include desktop {
-      padding-bottom: calc(100vh - 106px - 75px);
+      padding-bottom: calc(100vh - 131px - 100px);
     }
   }
 
