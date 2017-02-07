@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  constraints(host: /^burgermonster\.net/) do
-    match "(*any)" => redirect { |params, request|
+  constraints(host: /^burgermonster/) do
+    get '*any', to: redirect { |params, request|
       URI.parse(request.url).tap { |uri| "www.#{uri.host}" }.to_s
     }
   end
