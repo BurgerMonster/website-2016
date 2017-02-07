@@ -1,10 +1,4 @@
 Rails.application.routes.draw do
-  constraints(host: /^burgermonster/) do
-    get '*any', to: redirect { |params, request|
-      URI.parse(request.url).tap { |uri| "www.#{uri.host}" }.to_s
-    }
-  end
-
   root 'main#home'
 
   get :menu, to: 'main#menu'
